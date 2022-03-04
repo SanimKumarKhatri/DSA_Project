@@ -19,8 +19,13 @@ void MainWindow::on_loginbutton_clicked()
     //l1.settext();
     l1.logindetail(ui->usernamebox->text(),ui->passwordbox->text());
     l1.getdata();
-    if(l1.loginstatus())
+    if(l1.loginstatus()){
         ui->loginstatusbox->setText("Login Successful");
+        this->hide();
+        nextwindow nw;
+        nw.setModal(true);
+        nw.exec();
+    }
     else
         ui->loginstatusbox->setText("Invalid username or password");
 }
