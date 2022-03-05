@@ -15,6 +15,7 @@ SOURCES += \
     nextwindow.cpp
 
 HEADERS += \
+    entity.h \
     login.h \
     mainwindow.h \
     nextwindow.h

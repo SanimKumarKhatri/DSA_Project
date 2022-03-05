@@ -2,28 +2,11 @@
 #define LOGIN_H
 
 #include <iostream>
-#include <fstream>
 #include <cstring>
 #include <iomanip>
-#include <QString>
 #include "mainwindow.h"
 #include <QFile>
-#include <QTextStream>
-#include <QDataStream>
-#include <QDebug>
-
-struct user{
-//public:
-        QString username;
-        QString password;
-        //initialize user
-    /*user();
-    user(QString n, QString p);
-    QString getUsername();
-    QString getPassword();
-    void getdata();
-    void putdata();*/
-};
+#include "entity.h"
 
 class login{
 private:

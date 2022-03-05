@@ -6,9 +6,7 @@
 
 int main(int argc, char *argv[])
 {
-    int h;
     qDebug()<<"Started!";
-    std::cin>>h;
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

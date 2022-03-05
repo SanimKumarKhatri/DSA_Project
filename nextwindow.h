@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_gender_activated(int index);
+
 private:
     Ui::nextwindow *ui;
 };

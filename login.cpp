@@ -1,16 +1,5 @@
 #include "login.h"
 
-QDataStream &operator>>(QDataStream &in, user &p){
-    in >> p.username >> p.password;
-    return in;
-}
-
-QDataStream &operator<<(QDataStream &out, const user &p){
-    out << p.username << p.password;
-    return out;
-}
-
-
 login::login(){
     this->matched=false;
 }
