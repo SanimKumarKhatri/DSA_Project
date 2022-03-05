@@ -4,7 +4,6 @@
 #include <iostream>
 #include <cstring>
 #include <iomanip>
-#include "mainwindow.h"
 #include <QFile>
 #include "entity.h"
 

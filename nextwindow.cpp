@@ -19,7 +19,8 @@ nextwindow::~nextwindow()
 
 void nextwindow::on_pushButton_clicked()
 {
-    Patient p;
+    this->close();
+   /* Patient p;
     p.patientNo=1;
     p.age=ui->Ageedit->text().toInt();
     QFile fout("patient.txt");
@@ -29,5 +30,5 @@ void nextwindow::on_pushButton_clicked()
             out<<data[i];
             qDebug()<<data[i].username<<" written in file";
         }
-    }
+    }*/
 }

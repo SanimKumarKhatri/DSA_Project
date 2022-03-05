@@ -39,7 +39,7 @@ void login::getdata(){
     if(fin.open(QIODevice::ReadOnly)){
         while(!fin.atEnd()){
         QDataStream in(&fin);
-        in>>temp;
+        in>>temp.username>>temp.password;
         qDebug()<<temp.username<<" "<<temp.password;
         if(u.username==temp.username)
         {
