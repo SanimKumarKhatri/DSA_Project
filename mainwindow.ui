@@ -7,16 +7,16 @@
     <x>0</x>
     <y>0</y>
     <width>484</width>
-    <height>186</height>
+    <height>179</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>The Big Sick</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>

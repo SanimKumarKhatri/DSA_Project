@@ -1,7 +1,4 @@
 #include "mainwindow.h"
-#include<iostream>
-#include <fstream>
-#include "login.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

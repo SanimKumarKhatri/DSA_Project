@@ -16,46 +16,111 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_search
 {
 public:
+    QVBoxLayout *verticalLayout;
     QLabel *label;
-    QPushButton *searchbutton;
-    QWidget *widget;
+    QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout;
     QLabel *patientnosearch;
     QLineEdit *patientnoedit;
+    QPushButton *searchbutton;
+    QHBoxLayout *horizontalLayout_3;
+    QLabel *fname;
+    QLabel *lname;
+    QLabel *age;
+    QLabel *gender;
+    QLabel *patienttype;
+    QLabel *detail;
+    QLabel *dateofdischarge;
+    QLabel *dateofvisit;
 
     void setupUi(QDialog *search)
     {
         if (search->objectName().isEmpty())
             search->setObjectName(QString::fromUtf8("search"));
-        search->resize(400, 300);
+        search->resize(400, 336);
+        verticalLayout = new QVBoxLayout(search);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label = new QLabel(search);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(30, 10, 141, 41));
-        searchbutton = new QPushButton(search);
-        searchbutton->setObjectName(QString::fromUtf8("searchbutton"));
-        searchbutton->setGeometry(QRect(240, 170, 83, 29));
-        widget = new QWidget(search);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(90, 120, 173, 26));
-        horizontalLayout = new QHBoxLayout(widget);
+
+        verticalLayout->addWidget(label);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        patientnosearch = new QLabel(widget);
+        patientnosearch = new QLabel(search);
         patientnosearch->setObjectName(QString::fromUtf8("patientnosearch"));
 
         horizontalLayout->addWidget(patientnosearch);
 
-        patientnoedit = new QLineEdit(widget);
+        patientnoedit = new QLineEdit(search);
         patientnoedit->setObjectName(QString::fromUtf8("patientnoedit"));
 
         horizontalLayout->addWidget(patientnoedit);
+
+
+        horizontalLayout_2->addLayout(horizontalLayout);
+
+        searchbutton = new QPushButton(search);
+        searchbutton->setObjectName(QString::fromUtf8("searchbutton"));
+
+        horizontalLayout_2->addWidget(searchbutton);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        fname = new QLabel(search);
+        fname->setObjectName(QString::fromUtf8("fname"));
+
+        horizontalLayout_3->addWidget(fname);
+
+        lname = new QLabel(search);
+        lname->setObjectName(QString::fromUtf8("lname"));
+
+        horizontalLayout_3->addWidget(lname);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+        age = new QLabel(search);
+        age->setObjectName(QString::fromUtf8("age"));
+
+        verticalLayout->addWidget(age);
+
+        gender = new QLabel(search);
+        gender->setObjectName(QString::fromUtf8("gender"));
+
+        verticalLayout->addWidget(gender);
+
+        patienttype = new QLabel(search);
+        patienttype->setObjectName(QString::fromUtf8("patienttype"));
+
+        verticalLayout->addWidget(patienttype);
+
+        detail = new QLabel(search);
+        detail->setObjectName(QString::fromUtf8("detail"));
+
+        verticalLayout->addWidget(detail);
+
+        dateofdischarge = new QLabel(search);
+        dateofdischarge->setObjectName(QString::fromUtf8("dateofdischarge"));
+
+        verticalLayout->addWidget(dateofdischarge);
+
+        dateofvisit = new QLabel(search);
+        dateofvisit->setObjectName(QString::fromUtf8("dateofvisit"));
+
+        verticalLayout->addWidget(dateofvisit);
 
 
         retranslateUi(search);
@@ -67,10 +132,18 @@ public:
     {
         search->setWindowTitle(QCoreApplication::translate("search", "The Big Sick", nullptr));
         label->setText(QCoreApplication::translate("search", "Search for data", nullptr));
-        searchbutton->setText(QCoreApplication::translate("search", "Search", nullptr));
         patientnosearch->setText(QCoreApplication::translate("search", "Patient No", nullptr));
         patientnoedit->setInputMask(QString());
         patientnoedit->setPlaceholderText(QCoreApplication::translate("search", "Patient ID", nullptr));
+        searchbutton->setText(QCoreApplication::translate("search", "Search", nullptr));
+        fname->setText(QString());
+        lname->setText(QString());
+        age->setText(QString());
+        gender->setText(QString());
+        patienttype->setText(QString());
+        detail->setText(QString());
+        dateofdischarge->setText(QString());
+        dateofvisit->setText(QString());
     } // retranslateUi
 
 };

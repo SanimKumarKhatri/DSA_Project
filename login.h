@@ -1,10 +1,6 @@
 #ifndef LOGIN_H
 #define LOGIN_H
 
-#include <iostream>
-#include <cstring>
-#include <iomanip>
-#include <QFile>
 #include "entity.h"
 
 class login{

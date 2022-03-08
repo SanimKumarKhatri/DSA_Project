@@ -2,7 +2,6 @@
 #define NODE_H
 
 #include "entity.h"
-#include <cmath>
 
 class Node{
 public:
@@ -21,10 +20,4 @@ public:
     bool isLeaf();
 };
 
-int max(int a, int b){
-    if(a<b)
-        return a;
-    else
-        return b;
-}
 #endif // NODE_H

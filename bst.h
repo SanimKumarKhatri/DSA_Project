@@ -9,6 +9,9 @@ public:
     Node* root;
     bool isEmpty();
 
+    //for some purpose
+    int MAXID;
+
     //avl tree for balancing to improve time complexity
     int height(Node*);
     int difference(Node*);
@@ -18,8 +21,7 @@ public:
     Node *lr_rotate(Node*);
     Node *balance(Node*);
     Node *insert(Node*, Patient);
-
-protected:
+    Node *del(Node*, Patient);
     void add(Patient c,Node* currentNode);
     Patient search(int value, Node* node);
     Patient searchBST(int);

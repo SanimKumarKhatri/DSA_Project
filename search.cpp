@@ -1,6 +1,6 @@
 #include "search.h"
 #include "ui_search.h"
-#include "entity.h"
+#include "data_without_file.h"
 
 search::search(QWidget *parent) :
     QDialog(parent),
@@ -17,24 +17,15 @@ search::~search()
 
 void search::on_searchbutton_clicked()
 {
-    bool matched=false;
     int temp = ui->patientnoedit->text().toInt();
-    Patient *p = new Patient;
-    QFile fout("patient.txt");
-    if(!fout.exists()){
-        qDebug()<<"File not found";
-    }
-    if(fout.open(QIODevice::ReadOnly)){
-        QDataStream in(&fout);
-        while(!matched){
-            in>>p->patientNo>>p->fname>>p->lname>>p->gender>>p->age>>p->patienttype>>p->dateofVisit>>p->dateofDischarge
-              >>p->detail;
-            if(temp==p->patientNo){
-                matched=true;
-                qDebug()<<p->patientNo<<p->fname<<p->age<<p->lname<<p->patienttype<<p->dateofVisit<<p->gender;
-            }
-        }
-    }
-    fout.close();
+    Patient p=bigdata.searchBST(temp);
+    ui->fname->setText("Name: "+p.fname);
+    ui->lname->setText(p.lname);
+    ui->age->setText("Age: "+ QString::number(p.age));
+    ui->gender->setText("Gender: "+p.gender);
+    ui->patienttype->setText(p.patienttype);
+    ui->dateofdischarge->setText("Date of discharge: "+ p.dateofDischarge);
+    ui->dateofvisit->setText("Date of Visit: "+p.dateofVisit);
+    ui->detail->setText("Patient Info: "+p.detail);
 }
 

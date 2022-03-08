@@ -1,6 +1,5 @@
 #include "addwindow.h"
 #include "ui_addwindow.h"
-#include "entity.h"
 
 //temp
 #include <QFile>
@@ -21,7 +20,7 @@ nextwindow::~nextwindow()
 void nextwindow::on_pushButton_clicked()
 {
     Patient *p = new Patient;
-    p->patientNo=1;
+    p->patientNo=++bigdata.MAXID;
     p->fname=ui->firstNameEditBox->text();
     p->lname=ui->lastNameeditbox->text();
     p->gender=ui->gender->currentText();
@@ -29,16 +28,5 @@ void nextwindow::on_pushButton_clicked()
     p->patienttype=ui->patientType->currentText();
     p->detail=ui->detail->text();
     p->age=ui->Ageedit->text().toInt();
-    p->dateofDischarge="0000";
-    QFile fout("patient.txt");
-    if(!fout.exists()){
-        qDebug()<<"File not found";
-    }
-    if(fout.open(QIODevice::Append)){
-        QDataStream out(&fout);
-            out<<p->patientNo<<p->fname<<p->lname<<p->gender<<p->age<<p->patienttype<<p->dateofVisit<<p->dateofDischarge
-              <<p->detail;
-            qDebug()<<p->patientNo<<" written in file";
-    }
-    fout.close();
+    bigdata.insert(bigdata.root, *p);
 }

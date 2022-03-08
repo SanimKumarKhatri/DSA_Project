@@ -1,9 +1,9 @@
 #include "bst.h"
 #include <QDebug>
 
-BST::BST()
-{
+BST::BST(){
     root=NULL;
+    MAXID=0;
 }
 
 int BST::height(Node *t){
@@ -11,7 +11,7 @@ int BST::height(Node *t){
     if(t!=NULL){
         int l_height=height(t->leftchild);
         int r_height=height(t->rightchild);
-        int max_height = max(l_height, r_height);
+        int max_height = (l_height>r_height)?l_height:r_height;
         h=max_height+1;
     }
     return h;
@@ -92,7 +92,7 @@ Node *BST::insert(Node *r, Patient p){
 }
 
 
-void BST::add(Patient c, Node* currentNode){
+/*void BST::add(Patient c, Node* currentNode){
     if(c.patientNo> currentNode->a.patientNo){
         if(currentNode->hasRightChild())
             add(c, currentNode->rightchild);
@@ -105,7 +105,7 @@ void BST::add(Patient c, Node* currentNode){
         else
             currentNode->leftchild=new Node(c);
     }
-}
+}*/
 
 Patient BST::search(int value, Node *node){
     if(node!=NULL){
@@ -125,6 +125,27 @@ Patient BST::search(int value, Node *node){
 
 Patient BST::searchBST(int value){
    return search(value, root);
+}
+
+Node *BST::del(Node *r, Patient s){
+    //Node *temp;
+    /*if(r==NULL)
+    {
+        return NULL;
+    }
+    if(s.patientNo > r->a.patientNo){
+        r->rightchild=del(r->rightchild,s);
+        if(difference(r)<-1){
+        if(difference(r->rightchild)<=0)
+            r=rr_rotate(r);
+        else
+            r=rl_rotate(r);
+        }
+    }
+    else if( s.patientNo < r->a.patientNo){
+        r->leftchild=insert(r->leftchild,s);
+        if(difference(r)>1)
+    }*/
 }
 
 bool BST::remove(Node **node, int value){

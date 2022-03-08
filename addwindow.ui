@@ -6,178 +6,172 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>386</width>
-    <height>318</height>
+    <width>349</width>
+    <height>252</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>The Big Sick</string>
   </property>
-  <widget class="QWidget" name="">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>38</y>
-     <width>315</width>
-     <height>189</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QLabel" name="nameLabel">
-        <property name="text">
-         <string>Name</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLineEdit" name="firstNameEditBox">
-          <property name="placeholderText">
-           <string>First name</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="lastNameeditbox">
-          <property name="placeholderText">
-           <string>Last name</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QLabel" name="DateofVisitBox">
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="lineWidth">
-         <number>1</number>
-        </property>
-        <property name="text">
-         <string>Date of Visit</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="DateofVisit">
-        <property name="inputMask">
-         <string/>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="maxLength">
-         <number>10</number>
-        </property>
-        <property name="placeholderText">
-         <string>yyyy/mm/dd</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="genderlabel">
-        <property name="text">
-         <string>Gender</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="gender">
-        <item>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="nameLabel">
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLineEdit" name="firstNameEditBox">
+           <property name="placeholderText">
+            <string>First name</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lastNameeditbox">
+           <property name="placeholderText">
+            <string>Last name</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="DateofVisitBox">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>Date of Visit</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DateofVisit">
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="maxLength">
+          <number>10</number>
+         </property>
+         <property name="placeholderText">
+          <string>yyyy/mm/dd</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="genderlabel">
          <property name="text">
           <string>Gender</string>
          </property>
-        </item>
-        <item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="gender">
+         <item>
+          <property name="text">
+           <string>Gender</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Male</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Female</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Others</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="agelabel">
          <property name="text">
-          <string>Male</string>
+          <string>Age</string>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Female</string>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="Ageedit">
+         <property name="inputMask">
+          <string/>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Others</string>
+         <property name="maxLength">
+          <number>3</number>
          </property>
-        </item>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QLabel" name="agelabel">
-        <property name="text">
-         <string>Age</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="Ageedit">
-        <property name="inputMask">
-         <string/>
-        </property>
-        <property name="maxLength">
-         <number>3</number>
-        </property>
-        <property name="placeholderText">
-         <string>age</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="patientType">
-        <item>
-         <property name="text">
-          <string>Patient Type</string>
+         <property name="placeholderText">
+          <string>age</string>
          </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Inpatient</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Outpatient</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <widget class="QLabel" name="detaillabel">
-      <property name="text">
-       <string>Brief detail:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="detail"/>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>ok</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="patientType">
+         <item>
+          <property name="text">
+           <string>Patient Type</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Inpatient</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Outpatient</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="detaillabel">
+       <property name="text">
+        <string>Brief detail:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="detail"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>ok</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

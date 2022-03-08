@@ -25,8 +25,8 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout_4;
+    QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -42,13 +42,13 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(484, 186);
+        MainWindow->resize(484, 179);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        verticalLayout_3 = new QVBoxLayout(centralwidget);
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4 = new QVBoxLayout(centralwidget);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
@@ -94,15 +94,15 @@ public:
         verticalLayout_2->addWidget(loginbutton);
 
 
-        verticalLayout_4->addLayout(verticalLayout_2);
+        verticalLayout_3->addLayout(verticalLayout_2);
 
         loginstatusbox = new QLabel(centralwidget);
         loginstatusbox->setObjectName(QString::fromUtf8("loginstatusbox"));
 
-        verticalLayout_4->addWidget(loginstatusbox);
+        verticalLayout_3->addWidget(loginstatusbox);
 
 
-        verticalLayout_3->addLayout(verticalLayout_4);
+        verticalLayout_4->addLayout(verticalLayout_3);
 
         MainWindow->setCentralWidget(centralwidget);
 

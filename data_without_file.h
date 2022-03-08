@@ -1,9 +1,8 @@
 #ifndef DATA_WITHOUT_FILE_H
 #define DATA_WITHOUT_FILE_H
 
-#include <iostream>
-#include <cmath>
 #include "entity.h"
+#include "bst.h"
 
 Patient r[20];
 
@@ -51,5 +50,12 @@ void setdata(){
 
 }
 
+BST bigdata;
 
+void tree_setup(){
+    for(int i=0; i<4;i++){
+        bigdata.insert(bigdata.root,r[i]);
+        bigdata.MAXID++;
+    }
+}
 #endif // DATA_WITHOUT_FILE_H

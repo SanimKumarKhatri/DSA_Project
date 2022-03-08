@@ -2,6 +2,7 @@
 #define NEXTWINDOW_H
 
 #include <QDialog>
+#include "data_without_file.h"
 
 namespace Ui {
 class nextwindow;

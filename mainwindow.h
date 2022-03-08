@@ -1,7 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <iostream>
 #include "login.h"
 #include <QMainWindow>
 #include "menu.h"

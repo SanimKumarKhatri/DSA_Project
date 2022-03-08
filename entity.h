@@ -20,15 +20,3 @@
             QString username;
             QString password;
     };
-
-    /*//overload >> operator to fetch user struct from datastream or file
-    QDataStream &operator>>(QDataStream &in, user &p){
-        in >> p.username >> p.password;
-        return in;
-    }*/
-
-   /* //overload << operator to insert user struct into datastream or file
-    QDataStream &operator<<(QDataStream &out, const user &p){
-        out << p.username << p.password;
-        return out;
-    }*/
