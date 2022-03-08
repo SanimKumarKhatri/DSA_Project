@@ -22,10 +22,10 @@ public:
     Node *balance(Node*);
     Node *insert(Node*, Patient);
     Node *del(Node*, Patient);
-    void add(Patient c,Node* currentNode);
+    //void add(Patient c,Node* currentNode);
     Patient search(int value, Node* node);
     Patient searchBST(int);
-    bool remove(Node** node,int value);
+    //bool remove(Node** node,int value);
 };
 
 #endif // BST_H

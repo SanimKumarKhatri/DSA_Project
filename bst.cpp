@@ -148,7 +148,7 @@ Node *BST::del(Node *r, Patient s){
     }*/
 }
 
-bool BST::remove(Node **node, int value){
+/*bool BST::remove(Node **node, int value){
     if(*node!=NULL){
         if((*node)->a.patientNo==value){
             if((*node)->isLeaf()){
@@ -170,7 +170,7 @@ bool BST::remove(Node **node, int value){
         }
     }
     return false;
-}
+}*/
 
 bool BST::isEmpty(){
     return root == NULL;

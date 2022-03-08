@@ -21,7 +21,6 @@ SOURCES += \
 HEADERS += \
     addwindow.h \
     bst.h \
-    data_without_file.h \
     entity.h \
     login.h \
     mainwindow.h \

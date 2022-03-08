@@ -5,6 +5,7 @@
 #include "addwindow.h"
 #include "search.h"
 #include "login.h"
+#include "bst.h"
 
 namespace Ui {
 class menu;
@@ -15,7 +16,7 @@ class menu : public QDialog
     Q_OBJECT
 
 public:
-    explicit menu(QWidget *parent = nullptr);
+    explicit menu(QWidget *parent = nullptr, BST *h);
     ~menu();
 
 private slots:

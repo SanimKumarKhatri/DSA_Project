@@ -1,7 +1,7 @@
 #include "menu.h"
 #include "ui_menu.h"
 
-menu::menu(QWidget *parent) :
+menu::menu(QWidget *parent, BST *h) :
     QDialog(parent),
     ui(new Ui::menu)
 {
