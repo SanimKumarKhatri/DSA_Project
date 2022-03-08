@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
+    node.cpp \
     search.cpp
 
 HEADERS += \
@@ -22,6 +23,7 @@ HEADERS += \
     login.h \
     mainwindow.h \
     menu.h \
+    node.h \
     search.h
 
 FORMS += \
