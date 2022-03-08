@@ -5,11 +5,6 @@ login::login(){
 }
 
 void login::logindetail(QString a, QString b){
-    //QString c= a.QString::toStdString();
-    //QString d= b.QString::toStdString();
-    //std::cout<<c<<" "<<d;
-   // QString x = QString::fromStdString(c);
-    //QString y= QString::fromStdString(d);
     qDebug() <<"Received Username: "<< a;
     qDebug() <<"Received Password: "<< b;
     u.username = a;
@@ -52,27 +47,6 @@ void login::getdata(){
         }
     }
     fin.close();
-
-    /*file.open("login.txt", std::ios::in);
-    if(!file.is_open())
-    {
-      qDebug()<<"Cannot open the login file";
-    }
-    while(file>>temp.username>>temp.password)
-    {
-        std::cout<<temp.username<<" "<<temp.password;
-        QString f = QString::fromUtf8(temp.username);
-        QString g = QString::fromUtf8(temp.password);
-        qDebug() << "Read: "<<f<<" "<<g;
-        if(u.getUsername()==temp.username)
-        {
-            if(u.getPassword()==temp.password)
-            {
-                matched = true;
-                break;
-            }
-        }
-    }*/
 
 }
 

@@ -22,7 +22,7 @@ void MainWindow::on_loginbutton_clicked()
     if(l1.loginstatus()){
         ui->loginstatusbox->setText("Login Successful");
         this->hide();
-        nextwindow nw;
+        menu nw;
         nw.setModal(true);
         nw.exec();
     }

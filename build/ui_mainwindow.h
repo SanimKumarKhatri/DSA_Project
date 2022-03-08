@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -26,8 +25,8 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QWidget *widget;
-    QFormLayout *formLayout;
+    QVBoxLayout *verticalLayout_3;
+    QVBoxLayout *verticalLayout_4;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
@@ -46,24 +45,22 @@ public:
         MainWindow->resize(484, 186);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(20, 20, 213, 136));
-        formLayout = new QFormLayout(widget);
-        formLayout->setObjectName(QString::fromUtf8("formLayout"));
-        formLayout->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_3 = new QVBoxLayout(centralwidget);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        usernamelabel = new QLabel(widget);
+        usernamelabel = new QLabel(centralwidget);
         usernamelabel->setObjectName(QString::fromUtf8("usernamelabel"));
 
         horizontalLayout->addWidget(usernamelabel);
 
-        usernamebox = new QLineEdit(widget);
+        usernamebox = new QLineEdit(centralwidget);
         usernamebox->setObjectName(QString::fromUtf8("usernamebox"));
 
         horizontalLayout->addWidget(usernamebox);
@@ -73,12 +70,12 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        passwordlabel = new QLabel(widget);
+        passwordlabel = new QLabel(centralwidget);
         passwordlabel->setObjectName(QString::fromUtf8("passwordlabel"));
 
         horizontalLayout_2->addWidget(passwordlabel);
 
-        passwordbox = new QLineEdit(widget);
+        passwordbox = new QLineEdit(centralwidget);
         passwordbox->setObjectName(QString::fromUtf8("passwordbox"));
         passwordbox->setEnabled(true);
         passwordbox->setEchoMode(QLineEdit::Password);
@@ -91,18 +88,21 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
-        loginbutton = new QPushButton(widget);
+        loginbutton = new QPushButton(centralwidget);
         loginbutton->setObjectName(QString::fromUtf8("loginbutton"));
 
         verticalLayout_2->addWidget(loginbutton);
 
 
-        formLayout->setLayout(0, QFormLayout::LabelRole, verticalLayout_2);
+        verticalLayout_4->addLayout(verticalLayout_2);
 
-        loginstatusbox = new QLabel(widget);
+        loginstatusbox = new QLabel(centralwidget);
         loginstatusbox->setObjectName(QString::fromUtf8("loginstatusbox"));
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, loginstatusbox);
+        verticalLayout_4->addWidget(loginstatusbox);
+
+
+        verticalLayout_3->addLayout(verticalLayout_4);
 
         MainWindow->setCentralWidget(centralwidget);
 

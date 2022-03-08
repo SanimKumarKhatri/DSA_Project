@@ -4,7 +4,7 @@
 #include <iostream>
 #include "login.h"
 #include <QMainWindow>
-#include "nextwindow.h"
+#include "menu.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }

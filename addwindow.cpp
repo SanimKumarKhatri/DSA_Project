@@ -1,4 +1,4 @@
-#include "nextwindow.h"
+#include "addwindow.h"
 #include "ui_nextwindow.h"
 #include "entity.h"
 
