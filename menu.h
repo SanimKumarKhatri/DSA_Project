@@ -7,6 +7,8 @@
 #include "login.h"
 #include "bst.h"
 
+extern BST bigdata;
+
 namespace Ui {
 class menu;
 }
@@ -16,7 +18,7 @@ class menu : public QDialog
     Q_OBJECT
 
 public:
-    explicit menu(QWidget *parent = nullptr, BST *h);
+    explicit menu(QWidget *parent = nullptr);
     ~menu();
 
 private slots:

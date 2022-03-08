@@ -1,13 +1,11 @@
 #include "search.h"
 #include "ui_search.h"
-#include "data_without_file.h"
 
 search::search(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::search)
 {
     ui->setupUi(this);
-    //ui->patientnoedit->setValidator(new QIntValidator(0, 1000, this))
 }
 
 search::~search()

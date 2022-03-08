@@ -2,6 +2,9 @@
 #define SEARCH_H
 
 #include <QDialog>
+#include "bst.h"
+
+extern BST bigdata;
 
 namespace Ui {
 class search;

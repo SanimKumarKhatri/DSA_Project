@@ -1,9 +1,6 @@
 #include "addwindow.h"
 #include "ui_addwindow.h"
 
-//temp
-#include <QFile>
-
 nextwindow::nextwindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::nextwindow)
