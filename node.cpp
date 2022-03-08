@@ -1,6 +1,6 @@
 #include "node.h"
 
-Node::Node(user b)
+Node::Node(Patient b)
 {
     this->a=b;
     this->rightchild=NULL;
@@ -20,4 +20,9 @@ bool Node::hasLeftChild()
 bool Node::hasRightChild()
 {
     return rightchild!=NULL;
+}
+
+bool Node::isLeaf()
+{
+    return !hasLeftChild()&&!hasRightChild();
 }

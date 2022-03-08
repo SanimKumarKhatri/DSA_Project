@@ -1,5 +1,5 @@
 #include "addwindow.h"
-#include "ui_nextwindow.h"
+#include "ui_addwindow.h"
 #include "entity.h"
 
 //temp
@@ -10,6 +10,7 @@ nextwindow::nextwindow(QWidget *parent) :
     ui(new Ui::nextwindow)
 {
     ui->setupUi(this);
+    ui->Ageedit->setValidator(new QIntValidator(0,200, this));
 }
 
 nextwindow::~nextwindow()
@@ -19,16 +20,25 @@ nextwindow::~nextwindow()
 
 void nextwindow::on_pushButton_clicked()
 {
-    this->close();
-   /* Patient p;
-    p.patientNo=1;
-    p.age=ui->Ageedit->text().toInt();
+    Patient *p = new Patient;
+    p->patientNo=1;
+    p->fname=ui->firstNameEditBox->text();
+    p->lname=ui->lastNameeditbox->text();
+    p->gender=ui->gender->currentText();
+    p->dateofVisit=ui->DateofVisit->text();
+    p->patienttype=ui->patientType->currentText();
+    p->detail=ui->detail->text();
+    p->age=ui->Ageedit->text().toInt();
+    p->dateofDischarge="0000";
     QFile fout("patient.txt");
-    if(fout.open(QIODevice::WriteOnly)){
+    if(!fout.exists()){
+        qDebug()<<"File not found";
+    }
+    if(fout.open(QIODevice::Append)){
         QDataStream out(&fout);
-        for(int i=0; i<4; i++){
-            out<<data[i];
-            qDebug()<<data[i].username<<" written in file";
-        }
-    }*/
+            out<<p->patientNo<<p->fname<<p->lname<<p->gender<<p->age<<p->patienttype<<p->dateofVisit<<p->dateofDischarge
+              <<p->detail;
+            qDebug()<<p->patientNo<<" written in file";
+    }
+    fout.close();
 }

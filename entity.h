@@ -2,13 +2,15 @@
 #include <QDebug>
 #include <QString>
 #include <QDataStream>
+#include <QFile>
 
     struct Patient{
         int patientNo;
         int age;
-        char gender;
-        QString name;
-        int patienttype;
+        QString gender;
+        QString fname;
+        QString lname;
+        QString patienttype;
         QString dateofVisit;
         QString dateofDischarge;
         QString detail;

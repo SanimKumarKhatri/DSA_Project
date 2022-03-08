@@ -15,6 +15,9 @@ public:
     explicit search(QWidget *parent = nullptr);
     ~search();
 
+private slots:
+    void on_searchbutton_clicked();
+
 private:
     Ui::search *ui;
 };

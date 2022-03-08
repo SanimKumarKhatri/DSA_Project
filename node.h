@@ -7,12 +7,12 @@
 class Node{
 public:
 
-    user a;
+    Patient a;
     Node* rightchild;
     Node* leftchild;
 
     //initialize
-    Node(user b);
+    Node(Patient b);
     ~Node();
 
     bool hasLeftChild();

@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     addwindow.cpp \
+    bst.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -19,6 +20,8 @@ SOURCES += \
 
 HEADERS += \
     addwindow.h \
+    bst.h \
+    data_without_file.h \
     entity.h \
     login.h \
     mainwindow.h \

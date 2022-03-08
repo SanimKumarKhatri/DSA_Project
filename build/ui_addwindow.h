@@ -17,65 +17,63 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_nextwindow
 {
 public:
-    QVBoxLayout *verticalLayout_5;
-    QVBoxLayout *verticalLayout_3;
-    QVBoxLayout *verticalLayout_2;
+    QWidget *widget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_2;
-    QHBoxLayout *horizontalLayout;
     QLabel *nameLabel;
-    QLineEdit *NameEditBox;
-    QHBoxLayout *horizontalLayout_5;
-    QHBoxLayout *horizontalLayout_4;
+    QHBoxLayout *horizontalLayout;
+    QLineEdit *firstNameEditBox;
+    QLineEdit *lastNameeditbox;
+    QHBoxLayout *horizontalLayout_3;
     QLabel *DateofVisitBox;
     QLineEdit *DateofVisit;
-    QHBoxLayout *horizontalLayout_3;
     QLabel *genderlabel;
     QComboBox *gender;
-    QHBoxLayout *horizontalLayout_7;
-    QHBoxLayout *horizontalLayout_6;
+    QHBoxLayout *horizontalLayout_4;
     QLabel *agelabel;
     QLineEdit *Ageedit;
     QComboBox *patientType;
-    QVBoxLayout *verticalLayout_4;
     QLabel *detaillabel;
-    QTextBrowser *detailedit;
+    QLineEdit *detail;
     QPushButton *pushButton;
 
     void setupUi(QDialog *nextwindow)
     {
         if (nextwindow->objectName().isEmpty())
             nextwindow->setObjectName(QString::fromUtf8("nextwindow"));
-        nextwindow->resize(395, 304);
-        verticalLayout_5 = new QVBoxLayout(nextwindow);
-        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        verticalLayout = new QVBoxLayout();
+        nextwindow->resize(386, 318);
+        widget = new QWidget(nextwindow);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(20, 38, 315, 189));
+        verticalLayout = new QVBoxLayout(widget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        nameLabel = new QLabel(nextwindow);
+        nameLabel = new QLabel(widget);
         nameLabel->setObjectName(QString::fromUtf8("nameLabel"));
 
-        horizontalLayout->addWidget(nameLabel);
+        horizontalLayout_2->addWidget(nameLabel);
 
-        NameEditBox = new QLineEdit(nextwindow);
-        NameEditBox->setObjectName(QString::fromUtf8("NameEditBox"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        firstNameEditBox = new QLineEdit(widget);
+        firstNameEditBox->setObjectName(QString::fromUtf8("firstNameEditBox"));
 
-        horizontalLayout->addWidget(NameEditBox);
+        horizontalLayout->addWidget(firstNameEditBox);
+
+        lastNameeditbox = new QLineEdit(widget);
+        lastNameeditbox->setObjectName(QString::fromUtf8("lastNameeditbox"));
+
+        horizontalLayout->addWidget(lastNameeditbox);
 
 
         horizontalLayout_2->addLayout(horizontalLayout);
@@ -83,37 +81,27 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_2);
 
-
-        verticalLayout_2->addLayout(verticalLayout);
-
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        DateofVisitBox = new QLabel(nextwindow);
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        DateofVisitBox = new QLabel(widget);
         DateofVisitBox->setObjectName(QString::fromUtf8("DateofVisitBox"));
         DateofVisitBox->setFrameShape(QFrame::NoFrame);
         DateofVisitBox->setLineWidth(1);
 
-        horizontalLayout_4->addWidget(DateofVisitBox);
+        horizontalLayout_3->addWidget(DateofVisitBox);
 
-        DateofVisit = new QLineEdit(nextwindow);
+        DateofVisit = new QLineEdit(widget);
         DateofVisit->setObjectName(QString::fromUtf8("DateofVisit"));
         DateofVisit->setMaxLength(10);
 
-        horizontalLayout_4->addWidget(DateofVisit);
+        horizontalLayout_3->addWidget(DateofVisit);
 
-
-        horizontalLayout_5->addLayout(horizontalLayout_4);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        genderlabel = new QLabel(nextwindow);
+        genderlabel = new QLabel(widget);
         genderlabel->setObjectName(QString::fromUtf8("genderlabel"));
 
         horizontalLayout_3->addWidget(genderlabel);
 
-        gender = new QComboBox(nextwindow);
+        gender = new QComboBox(widget);
         gender->addItem(QString());
         gender->addItem(QString());
         gender->addItem(QString());
@@ -123,65 +111,46 @@ public:
         horizontalLayout_3->addWidget(gender);
 
 
-        horizontalLayout_5->addLayout(horizontalLayout_3);
+        verticalLayout->addLayout(horizontalLayout_3);
 
-
-        verticalLayout_2->addLayout(horizontalLayout_5);
-
-
-        verticalLayout_3->addLayout(verticalLayout_2);
-
-        horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
-        horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
-        agelabel = new QLabel(nextwindow);
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        agelabel = new QLabel(widget);
         agelabel->setObjectName(QString::fromUtf8("agelabel"));
 
-        horizontalLayout_6->addWidget(agelabel);
+        horizontalLayout_4->addWidget(agelabel);
 
-        Ageedit = new QLineEdit(nextwindow);
+        Ageedit = new QLineEdit(widget);
         Ageedit->setObjectName(QString::fromUtf8("Ageedit"));
         Ageedit->setMaxLength(3);
 
-        horizontalLayout_6->addWidget(Ageedit);
+        horizontalLayout_4->addWidget(Ageedit);
 
-
-        horizontalLayout_7->addLayout(horizontalLayout_6);
-
-        patientType = new QComboBox(nextwindow);
+        patientType = new QComboBox(widget);
         patientType->addItem(QString());
         patientType->addItem(QString());
         patientType->addItem(QString());
         patientType->setObjectName(QString::fromUtf8("patientType"));
 
-        horizontalLayout_7->addWidget(patientType);
+        horizontalLayout_4->addWidget(patientType);
 
 
-        verticalLayout_3->addLayout(horizontalLayout_7);
+        verticalLayout->addLayout(horizontalLayout_4);
 
-
-        verticalLayout_5->addLayout(verticalLayout_3);
-
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
-        detaillabel = new QLabel(nextwindow);
+        detaillabel = new QLabel(widget);
         detaillabel->setObjectName(QString::fromUtf8("detaillabel"));
 
-        verticalLayout_4->addWidget(detaillabel);
+        verticalLayout->addWidget(detaillabel);
 
-        detailedit = new QTextBrowser(nextwindow);
-        detailedit->setObjectName(QString::fromUtf8("detailedit"));
+        detail = new QLineEdit(widget);
+        detail->setObjectName(QString::fromUtf8("detail"));
 
-        verticalLayout_4->addWidget(detailedit);
+        verticalLayout->addWidget(detail);
 
-
-        verticalLayout_5->addLayout(verticalLayout_4);
-
-        pushButton = new QPushButton(nextwindow);
+        pushButton = new QPushButton(widget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
-        verticalLayout_5->addWidget(pushButton);
+        verticalLayout->addWidget(pushButton);
 
 
         retranslateUi(nextwindow);
@@ -193,6 +162,8 @@ public:
     {
         nextwindow->setWindowTitle(QCoreApplication::translate("nextwindow", "The Big Sick", nullptr));
         nameLabel->setText(QCoreApplication::translate("nextwindow", "Name", nullptr));
+        firstNameEditBox->setPlaceholderText(QCoreApplication::translate("nextwindow", "First name", nullptr));
+        lastNameeditbox->setPlaceholderText(QCoreApplication::translate("nextwindow", "Last name", nullptr));
         DateofVisitBox->setText(QCoreApplication::translate("nextwindow", "Date of Visit", nullptr));
         DateofVisit->setInputMask(QString());
         DateofVisit->setText(QString());

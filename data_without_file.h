@@ -1,0 +1,4 @@
+#ifndef DATA_WITHOUT_FILE_H
+#define DATA_WITHOUT_FILE_H
+
+#endif // DATA_WITHOUT_FILE_H

@@ -1,4 +1,5 @@
 release/addwindow.o
+release/bst.o
 release/login.o
 release/main.o
 release/mainwindow.o
