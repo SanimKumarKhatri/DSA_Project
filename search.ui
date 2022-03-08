@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>336</height>
+    <width>424</width>
+    <height>363</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -100,6 +100,13 @@
     </widget>
    </item>
    <item>
+    <widget class="QLabel" name="dateofvisit">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QLabel" name="dateofdischarge">
      <property name="text">
       <string/>
@@ -107,11 +114,22 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="dateofvisit">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deletebutton">
+       <property name="text">
+        <string>Delete</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>

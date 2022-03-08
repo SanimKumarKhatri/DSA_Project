@@ -37,14 +37,17 @@ public:
     QLabel *gender;
     QLabel *patienttype;
     QLabel *detail;
-    QLabel *dateofdischarge;
     QLabel *dateofvisit;
+    QLabel *dateofdischarge;
+    QHBoxLayout *horizontalLayout_4;
+    QLabel *label_2;
+    QPushButton *deletebutton;
 
     void setupUi(QDialog *search)
     {
         if (search->objectName().isEmpty())
             search->setObjectName(QString::fromUtf8("search"));
-        search->resize(400, 336);
+        search->resize(424, 363);
         verticalLayout = new QVBoxLayout(search);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         label = new QLabel(search);
@@ -112,15 +115,30 @@ public:
 
         verticalLayout->addWidget(detail);
 
+        dateofvisit = new QLabel(search);
+        dateofvisit->setObjectName(QString::fromUtf8("dateofvisit"));
+
+        verticalLayout->addWidget(dateofvisit);
+
         dateofdischarge = new QLabel(search);
         dateofdischarge->setObjectName(QString::fromUtf8("dateofdischarge"));
 
         verticalLayout->addWidget(dateofdischarge);
 
-        dateofvisit = new QLabel(search);
-        dateofvisit->setObjectName(QString::fromUtf8("dateofvisit"));
+        horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        label_2 = new QLabel(search);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
 
-        verticalLayout->addWidget(dateofvisit);
+        horizontalLayout_4->addWidget(label_2);
+
+        deletebutton = new QPushButton(search);
+        deletebutton->setObjectName(QString::fromUtf8("deletebutton"));
+
+        horizontalLayout_4->addWidget(deletebutton);
+
+
+        verticalLayout->addLayout(horizontalLayout_4);
 
 
         retranslateUi(search);
@@ -142,8 +160,10 @@ public:
         gender->setText(QString());
         patienttype->setText(QString());
         detail->setText(QString());
-        dateofdischarge->setText(QString());
         dateofvisit->setText(QString());
+        dateofdischarge->setText(QString());
+        label_2->setText(QString());
+        deletebutton->setText(QCoreApplication::translate("search", "Delete", nullptr));
     } // retranslateUi
 
 };

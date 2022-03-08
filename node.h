@@ -3,14 +3,13 @@
 
 #include "entity.h"
 
-class Node{
-public:
-
+struct Node{
     Patient a;
     Node* rightchild;
     Node* leftchild;
-
-    //initialize
+    int height;
+};
+    /*//initialize
     Node();
     Node(Patient b);
     ~Node();
@@ -18,6 +17,6 @@ public:
     bool hasLeftChild();
     bool hasRightChild();
     bool isLeaf();
-};
+};*/
 
 #endif // NODE_H

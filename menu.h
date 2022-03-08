@@ -7,7 +7,7 @@
 #include "login.h"
 #include "bst.h"
 
-extern BST bigdata;
+//extern BST bigdata;
 
 namespace Ui {
 class menu;

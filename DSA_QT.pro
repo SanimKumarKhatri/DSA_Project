@@ -15,7 +15,6 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     menu.cpp \
-    node.cpp \
     search.cpp
 
 HEADERS += \

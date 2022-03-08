@@ -53,13 +53,6 @@
        </item>
       </layout>
      </item>
-     <item>
-      <widget class="QPushButton" name="deletebutton">
-       <property name="text">
-        <string>Delete existing data</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </item>
    <item>

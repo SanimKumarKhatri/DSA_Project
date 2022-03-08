@@ -6,8 +6,10 @@ BST::BST(){
     MAXID=0;
 }
 
+
+/*
 int BST::height(Node *t){
-    int h=0;
+    /*int h=0;
     if(t!=NULL){
         int l_height=height(t->leftchild);
         int r_height=height(t->rightchild);
@@ -15,28 +17,39 @@ int BST::height(Node *t){
         h=max_height+1;
     }
     return h;
+    if(t==NULL)
+        return 0;
+    return t->height;
 }
 
 int BST::difference(Node *t){
-    int l_height=height(t->leftchild);
+    if(t==NULL)
+        return 0;
+    /*int l_height=height(t->leftchild);
     int r_height=height(t->rightchild);
     int b_factor= l_height-r_height;
-    return b_factor;
+    return height(t->leftchild)-height(t->rightchild);
 }
 
 Node *BST::rr_rotate(Node *parent){
     Node *t;
-    t=parent->rightchild;
-    parent->rightchild=t->leftchild;
-    t->leftchild=parent;
+    t=parent->leftchild;
+    parent->leftchild=t->rightchild;
+    t->rightchild=parent;
+
+    parent->height=max(height(parent->rightchild), height(parent->leftchild))+1;
+    t->height = max(height(t->rightchild), height(t->leftchild))+1;
     return t;
 }
 
 Node *BST::ll_rotate(Node *parent){
     Node *t;
     t=parent->rightchild;
-    parent->leftchild=t->leftchild;
-    t->rightchild=parent;
+    parent->rightchild=t->leftchild;
+    t->leftchild=parent;
+
+    parent->height=max(height(parent->rightchild), height(parent->leftchild))+1;
+    t->height = max(height(t->rightchild), height(t->leftchild))+1;
     return t;
 }
 
@@ -74,19 +87,28 @@ Node *BST::balance(Node *t){
 
 Node *BST::insert(Node *r, Patient p){
     if(r==NULL){
-        r= new Node;
-        r->a= p;
+        Node *temp;
+        temp = new Node;
+        temp->a=p;
+        r= temp;
+        //qDebug()<<r->a.patientNo;
+        //r->a= p;
+        //qDebug()<<r->a.age;
         r->leftchild=NULL;
         r->rightchild=NULL;
         return r;
     }
     else if(p.patientNo < r->a.patientNo){
+        qDebug()<<"inside left child";
         r->leftchild = insert(r->leftchild, p);
-        r= balance(r);
+        //qDebug()<<r->leftchild->a.age;
+        r=balance(r);
     }
     else if(p.patientNo>=r->a.patientNo){
+        qDebug()<<"inside Right child";
         r->rightchild=insert(r->rightchild, p);
-                r=balance(r);
+        //qDebug()<<r->leftchild->a.age;
+         r=balance(r);
     }
     return r;
 }
@@ -105,8 +127,8 @@ Node *BST::insert(Node *r, Patient p){
         else
             currentNode->leftchild=new Node(c);
     }
-}*/
-
+}
+*/
 Patient BST::search(int value, Node *node){
     if(node!=NULL){
         if(value>node->a.patientNo)
@@ -127,7 +149,7 @@ Patient BST::searchBST(int value){
    return search(value, root);
 }
 
-Node *BST::del(Node *r, Patient s){
+//Node *BST::del(Node *r, Patient s){
     //Node *temp;
     /*if(r==NULL)
     {
@@ -146,7 +168,7 @@ Node *BST::del(Node *r, Patient s){
         r->leftchild=insert(r->leftchild,s);
         if(difference(r)>1)
     }*/
-}
+//}
 
 /*bool BST::remove(Node **node, int value){
     if(*node!=NULL){
@@ -170,8 +192,8 @@ Node *BST::del(Node *r, Patient s){
         }
     }
     return false;
-}*/
+}
 
 bool BST::isEmpty(){
     return root == NULL;
-}
+}*/

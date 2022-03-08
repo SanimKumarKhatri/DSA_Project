@@ -4,7 +4,6 @@ debug/login.o
 debug/main.o
 debug/mainwindow.o
 debug/menu.o
-debug/node.o
 debug/search.o
 debug/moc_addwindow.o
 debug/moc_mainwindow.o

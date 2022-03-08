@@ -2,9 +2,12 @@
 #include <QApplication>
 #include "bst.h"
 
-Patient r[20];
+Patient r[4];
 BST bigdata;
 void setdata(){
+
+    qDebug()<<"Inside setup data";
+
     r[0].patientNo= 1;
     r[0].age=21;
     r[0].gender = "Male";
@@ -47,17 +50,24 @@ void setdata(){
 
 }
 void tree_setup(){
+    qDebug()<<"Inside tree setup";
     for(int i=0; i<4;i++){
-        bigdata.insert(bigdata.root,r[i]);
+        qDebug()<<"Inside tree setup "<<i;
+        bigdata.root=bigdata.insert(bigdata.root,r[i]);
+        qDebug()<<bigdata.root->a.patientNo;
+        qDebug()<<bigdata.MAXID;
         bigdata.MAXID++;
     }
 }
+
+int apple=12;
 
 int main(int argc, char *argv[])
 {
     qDebug()<<"Started!";
     setdata();
     tree_setup();
+    //qDebug()<<bigdata.root->a.fname;
     QApplication a(argc, argv);
     MainWindow w;
     w.show();

@@ -16,7 +16,7 @@ search::~search()
 void search::on_searchbutton_clicked()
 {
     int temp = ui->patientnoedit->text().toInt();
-    Patient p=bigdata.searchBST(temp);
+    p=bigdata.searchBST(temp);
     ui->fname->setText("Name: "+p.fname);
     ui->lname->setText(p.lname);
     ui->age->setText("Age: "+ QString::number(p.age));
@@ -25,5 +25,11 @@ void search::on_searchbutton_clicked()
     ui->dateofdischarge->setText("Date of discharge: "+ p.dateofDischarge);
     ui->dateofvisit->setText("Date of Visit: "+p.dateofVisit);
     ui->detail->setText("Patient Info: "+p.detail);
+}
+
+
+void search::on_deletebutton_clicked()
+{
+    //bigdata.del(bigdata.root, p);
 }
 

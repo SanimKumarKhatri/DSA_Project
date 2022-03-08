@@ -16,10 +16,13 @@ class search : public QDialog
 
 public:
     explicit search(QWidget *parent = nullptr);
+    Patient p;
     ~search();
 
 private slots:
     void on_searchbutton_clicked();
+
+    void on_deletebutton_clicked();
 
 private:
     Ui::search *ui;

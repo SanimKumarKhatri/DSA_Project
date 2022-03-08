@@ -28,7 +28,6 @@ public:
     QPushButton *searchbutton;
     QPushButton *editbutton;
     QPushButton *addbutton;
-    QPushButton *deletebutton;
     QLabel *reading_sortingbox;
 
     void setupUi(QDialog *menu)
@@ -68,11 +67,6 @@ public:
 
         verticalLayout_2->addLayout(verticalLayout);
 
-        deletebutton = new QPushButton(menu);
-        deletebutton->setObjectName(QString::fromUtf8("deletebutton"));
-
-        verticalLayout_2->addWidget(deletebutton);
-
 
         verticalLayout_3->addLayout(verticalLayout_2);
 
@@ -94,7 +88,6 @@ public:
         searchbutton->setText(QCoreApplication::translate("menu", "Search", nullptr));
         editbutton->setText(QCoreApplication::translate("menu", "Edit the archieve data", nullptr));
         addbutton->setText(QCoreApplication::translate("menu", "Insert new patient data", nullptr));
-        deletebutton->setText(QCoreApplication::translate("menu", "Delete existing data", nullptr));
         reading_sortingbox->setText(QString());
     } // retranslateUi
 
