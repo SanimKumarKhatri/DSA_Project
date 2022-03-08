@@ -1,0 +1,10 @@
+release/addwindow.o
+release/login.o
+release/main.o
+release/mainwindow.o
+release/menu.o
+release/search.o
+release/moc_addwindow.o
+release/moc_mainwindow.o
+release/moc_menu.o
+release/moc_search.o

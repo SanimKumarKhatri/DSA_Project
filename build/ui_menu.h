@@ -89,7 +89,7 @@ public:
 
     void retranslateUi(QDialog *menu)
     {
-        menu->setWindowTitle(QCoreApplication::translate("menu", "Dialog", nullptr));
+        menu->setWindowTitle(QCoreApplication::translate("menu", "The Big Sick", nullptr));
         label->setText(QCoreApplication::translate("menu", "Welcome", nullptr));
         searchbutton->setText(QCoreApplication::translate("menu", "Search", nullptr));
         editbutton->setText(QCoreApplication::translate("menu", "Edit the archieve data", nullptr));

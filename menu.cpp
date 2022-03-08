@@ -6,6 +6,7 @@ menu::menu(QWidget *parent) :
     ui(new Ui::menu)
 {
     ui->setupUi(this);
+    ui->label->setText("WELCOME ");
 }
 
 menu::~menu()
@@ -19,5 +20,14 @@ void menu::on_addbutton_clicked()
     nextwindow add;
     add.show();
     add.exec();
+}
+
+
+void menu::on_searchbutton_clicked()
+{
+    this->hide();
+    search Search;
+    Search.show();
+    Search.exec();
 }
 

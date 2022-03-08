@@ -13,19 +13,22 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    menu.cpp
+    menu.cpp \
+    search.cpp
 
 HEADERS += \
     addwindow.h \
     entity.h \
     login.h \
     mainwindow.h \
-    menu.h
+    menu.h \
+    search.h
 
 FORMS += \
     addwindow.ui \
     mainwindow.ui \
-    menu.ui
+    menu.ui \
+    search.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

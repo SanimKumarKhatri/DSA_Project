@@ -191,7 +191,7 @@ public:
 
     void retranslateUi(QDialog *nextwindow)
     {
-        nextwindow->setWindowTitle(QCoreApplication::translate("nextwindow", "Dialog", nullptr));
+        nextwindow->setWindowTitle(QCoreApplication::translate("nextwindow", "The Big Sick", nullptr));
         nameLabel->setText(QCoreApplication::translate("nextwindow", "Name", nullptr));
         DateofVisitBox->setText(QCoreApplication::translate("nextwindow", "Date of Visit", nullptr));
         DateofVisit->setInputMask(QString());

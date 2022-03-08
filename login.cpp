@@ -35,7 +35,7 @@ void login::getdata(){
         while(!fin.atEnd()){
         QDataStream in(&fin);
         in>>temp.username>>temp.password;
-        qDebug()<<temp.username<<" "<<temp.password;
+        //qDebug()<<temp.username<<" "<<temp.password;
         if(u.username==temp.username)
         {
             if(u.password==temp.password)

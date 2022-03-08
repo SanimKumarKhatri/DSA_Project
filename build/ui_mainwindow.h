@@ -113,7 +113,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "The Big Sick", nullptr));
         usernamelabel->setText(QCoreApplication::translate("MainWindow", "Username", nullptr));
         passwordlabel->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         passwordbox->setText(QString());
