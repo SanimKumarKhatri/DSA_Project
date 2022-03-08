@@ -17,16 +17,8 @@
     };
 
     struct user{
-    //public:
             QString username;
             QString password;
-            //initialize user
-        /*user();
-        user(QString n, QString p);
-        QString getUsername();
-        QString getPassword();
-        void getdata();
-        void putdata();*/
     };
 
     /*//overload >> operator to fetch user struct from datastream or file

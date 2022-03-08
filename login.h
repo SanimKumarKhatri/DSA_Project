@@ -9,7 +9,6 @@
 
 class login{
 private:
-        //std::fstream file;
         user u;
         bool matched;
 public:

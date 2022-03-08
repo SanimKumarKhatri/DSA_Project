@@ -1,5 +1,9 @@
 #include "node.h"
 
+Node::Node(){
+
+}
+
 Node::Node(Patient b)
 {
     this->a=b;
