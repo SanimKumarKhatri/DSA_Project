@@ -25,11 +25,12 @@ void search::on_searchbutton_clicked()
     clock_t end = clock();
     time_taken = double(end-begin_time)/CLOCKS_PER_SEC;
     qDebug()<<time_taken;
-    if(p.patientNo!=-1)
+    if(p.patientNo!=-1){
         found=true;
+        ui->label_2->setText(QString::number(time_taken,'g',15)+"s");
+    }
     else
-        ui->label_2->setText("Entry not found!!");
-    ui->label_2->setText(QString::number(time_taken,'g',15)+"s");
+        ui->label_2->setText("Entry not found!!");   
     ui->fname->setText("Name: "+p.fname);
     ui->lname->setText(p.lname);
     ui->age->setText("Age: "+ QString::number(p.age));

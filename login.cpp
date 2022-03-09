@@ -14,14 +14,14 @@ void login::logindetail(QString a, QString b){
 /*void login::settext(){
     user data[4];
 data[0]={"admin", "admin"};
-data[1]={"sannyxd","076bei037"};
-data[2]={"sndz","076bei036"};
-data[3]={"sushi","076bei045"};
+data[1]={"admin1","password"};
+data[2]={"admin2","password"};
+data[3]={"admin3","password"};
     QFile fout("login.txt");
     if(fout.open(QIODevice::WriteOnly)){
         QDataStream out(&fout);
         for(int i=0; i<4; i++){
-            out<<data[i];
+            out<<data[i].username<<data[i].password;
             qDebug()<<data[i].username<<" written in file";
         }
     }

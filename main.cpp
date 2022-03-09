@@ -11,18 +11,18 @@ void setdata(){
     r[0].patientNo= 1;
     r[0].age=21;
     r[0].gender = "Male";
-    r[0].fname= "Sanim";
-    r[0].lname= "Khatri";
+    r[0].fname= "abcd";
+    r[0].lname= "abcd";
     r[0].patienttype = "Outpatient";
     r[0].dateofVisit = "2078/11/25";
-    r[0].dateofDischarge = "0000";
+    r[0].dateofDischarge = "";
     r[0].detail = "Regular Checkup";
 
     r[1].patientNo= 2;
     r[1].age=21;
     r[1].gender = "Male";
-    r[1].fname= "Sandesh";
-    r[1].lname= "Thapa";
+    r[1].fname= "efgh";
+    r[1].lname= "efgh";
     r[1].patienttype = "Outpatient";
     r[1].dateofVisit = "2078/11/25";
     r[1].dateofDischarge = "";
@@ -31,8 +31,8 @@ void setdata(){
     r[2].patientNo= 3;
     r[2].age=21;
     r[2].gender = "Male";
-    r[2].fname= "Suvash";
-    r[2].lname= "Joshi";
+    r[2].fname= "ijkl";
+    r[2].lname= "ijkl";
     r[2].patienttype = "Inpatient";
     r[2].dateofVisit = "2078/10/25";
     r[2].dateofDischarge = "2078/11/25";
@@ -148,11 +148,20 @@ void setdata(){
     r[13].dateofDischarge = "2077/10/09";
     r[13].detail = "Denture";
 
+    r[14].patientNo= 15;
+    r[14].age=88;
+    r[14].gender = "Male";
+    r[14].fname= "old";
+    r[14].lname= "man";
+    r[14].patienttype = "Inpatient";
+    r[14].dateofVisit = "2078/08/08";
+    r[14].dateofDischarge = "2077/10/09";
+    r[14].detail = "Denture";
 }
 
 void tree_setup(){
     qDebug()<<"Inside tree setup";
-    for(int i=0; i<14;i++){
+    for(int i=0; i<15;i++){
         qDebug()<<"Inside tree setup "<<i;
         bigdata.root=bigdata.insert(bigdata.root,r[i]);
         qDebug()<<bigdata.root->a.patientNo;
