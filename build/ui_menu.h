@@ -26,7 +26,6 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QPushButton *searchbutton;
-    QPushButton *editbutton;
     QPushButton *addbutton;
     QLabel *reading_sortingbox;
 
@@ -53,11 +52,6 @@ public:
         searchbutton->setObjectName(QString::fromUtf8("searchbutton"));
 
         verticalLayout->addWidget(searchbutton);
-
-        editbutton = new QPushButton(menu);
-        editbutton->setObjectName(QString::fromUtf8("editbutton"));
-
-        verticalLayout->addWidget(editbutton);
 
         addbutton = new QPushButton(menu);
         addbutton->setObjectName(QString::fromUtf8("addbutton"));
@@ -86,7 +80,6 @@ public:
         menu->setWindowTitle(QCoreApplication::translate("menu", "The Big Sick", nullptr));
         label->setText(QCoreApplication::translate("menu", "Welcome", nullptr));
         searchbutton->setText(QCoreApplication::translate("menu", "Search", nullptr));
-        editbutton->setText(QCoreApplication::translate("menu", "Edit the archieve data", nullptr));
         addbutton->setText(QCoreApplication::translate("menu", "Insert new patient data", nullptr));
         reading_sortingbox->setText(QString());
     } // retranslateUi

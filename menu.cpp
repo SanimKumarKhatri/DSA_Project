@@ -17,9 +17,10 @@ menu::~menu()
 void menu::on_addbutton_clicked()
 {
     this->hide();
-    nextwindow add;
-    add.show();
-    add.exec();
+    nextwindow newadd;
+    newadd.show();
+    newadd.exec();
+
 }
 
 

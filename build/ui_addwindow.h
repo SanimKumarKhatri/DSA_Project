@@ -26,7 +26,7 @@ class Ui_nextwindow
 public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
-    QHBoxLayout *horizontalLayout_2;
+    QHBoxLayout *horizontalLayout_5;
     QLabel *nameLabel;
     QHBoxLayout *horizontalLayout;
     QLineEdit *firstNameEditBox;
@@ -36,6 +36,9 @@ public:
     QLineEdit *DateofVisit;
     QLabel *genderlabel;
     QComboBox *gender;
+    QHBoxLayout *horizontalLayout_6;
+    QLabel *dateofdischarge;
+    QLineEdit *dateofdischargeedit;
     QHBoxLayout *horizontalLayout_4;
     QLabel *agelabel;
     QLineEdit *Ageedit;
@@ -43,22 +46,23 @@ public:
     QLabel *detaillabel;
     QLineEdit *detail;
     QPushButton *pushButton;
+    QLabel *message;
 
     void setupUi(QDialog *nextwindow)
     {
         if (nextwindow->objectName().isEmpty())
             nextwindow->setObjectName(QString::fromUtf8("nextwindow"));
-        nextwindow->resize(349, 252);
+        nextwindow->resize(570, 510);
         verticalLayout_2 = new QVBoxLayout(nextwindow);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         nameLabel = new QLabel(nextwindow);
         nameLabel->setObjectName(QString::fromUtf8("nameLabel"));
 
-        horizontalLayout_2->addWidget(nameLabel);
+        horizontalLayout_5->addWidget(nameLabel);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -73,10 +77,10 @@ public:
         horizontalLayout->addWidget(lastNameeditbox);
 
 
-        horizontalLayout_2->addLayout(horizontalLayout);
+        horizontalLayout_5->addLayout(horizontalLayout);
 
 
-        verticalLayout->addLayout(horizontalLayout_2);
+        verticalLayout->addLayout(horizontalLayout_5);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
@@ -109,6 +113,21 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_3);
+
+        horizontalLayout_6 = new QHBoxLayout();
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
+        dateofdischarge = new QLabel(nextwindow);
+        dateofdischarge->setObjectName(QString::fromUtf8("dateofdischarge"));
+
+        horizontalLayout_6->addWidget(dateofdischarge);
+
+        dateofdischargeedit = new QLineEdit(nextwindow);
+        dateofdischargeedit->setObjectName(QString::fromUtf8("dateofdischargeedit"));
+
+        horizontalLayout_6->addWidget(dateofdischargeedit);
+
+
+        verticalLayout->addLayout(horizontalLayout_6);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
@@ -149,6 +168,11 @@ public:
 
         verticalLayout->addWidget(pushButton);
 
+        message = new QLabel(nextwindow);
+        message->setObjectName(QString::fromUtf8("message"));
+
+        verticalLayout->addWidget(message);
+
 
         verticalLayout_2->addLayout(verticalLayout);
 
@@ -174,6 +198,8 @@ public:
         gender->setItemText(2, QCoreApplication::translate("nextwindow", "Female", nullptr));
         gender->setItemText(3, QCoreApplication::translate("nextwindow", "Others", nullptr));
 
+        dateofdischarge->setText(QCoreApplication::translate("nextwindow", "Date of Discharge", nullptr));
+        dateofdischargeedit->setPlaceholderText(QCoreApplication::translate("nextwindow", "yyyy/mm/dd", nullptr));
         agelabel->setText(QCoreApplication::translate("nextwindow", "Age", nullptr));
         Ageedit->setInputMask(QString());
         Ageedit->setPlaceholderText(QCoreApplication::translate("nextwindow", "age", nullptr));
@@ -183,6 +209,7 @@ public:
 
         detaillabel->setText(QCoreApplication::translate("nextwindow", "Brief detail:", nullptr));
         pushButton->setText(QCoreApplication::translate("nextwindow", "ok", nullptr));
+        message->setText(QString());
     } // retranslateUi
 
 };

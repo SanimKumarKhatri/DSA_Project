@@ -2,6 +2,7 @@
 #define MENU_H
 
 #include <QDialog>
+#include <QStackedLayout>
 #include "addwindow.h"
 #include "search.h"
 #include "login.h"
@@ -20,6 +21,7 @@ class menu : public QDialog
 public:
     explicit menu(QWidget *parent = nullptr);
     ~menu();
+    //Layout layout();
 
 private slots:
     void on_addbutton_clicked();

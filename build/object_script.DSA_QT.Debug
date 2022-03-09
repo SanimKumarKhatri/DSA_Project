@@ -1,11 +1,13 @@
 debug/addwindow.o
 debug/bst.o
+debug/edit_data.o
 debug/login.o
 debug/main.o
 debug/mainwindow.o
 debug/menu.o
 debug/search.o
 debug/moc_addwindow.o
+debug/moc_edit_data.o
 debug/moc_mainwindow.o
 debug/moc_menu.o
 debug/moc_search.o

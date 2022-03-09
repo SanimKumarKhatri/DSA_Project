@@ -141,6 +141,7 @@ Patient BST::search(int value, Node *node){
     else{
         Patient notFound;
         notFound.patientNo=-1;
+        notFound.age=-1;
         return notFound;
     }
 }

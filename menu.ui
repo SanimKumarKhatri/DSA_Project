@@ -38,13 +38,6 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="editbutton">
-         <property name="text">
-          <string>Edit the archieve data</string>
-         </property>
-        </widget>
-       </item>
-       <item>
         <widget class="QPushButton" name="addbutton">
          <property name="text">
           <string>Insert new patient data</string>

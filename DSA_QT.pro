@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     addwindow.cpp \
     bst.cpp \
+    edit_data.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 HEADERS += \
     addwindow.h \
     bst.h \
+    edit_data.h \
     entity.h \
     login.h \
     mainwindow.h \
@@ -29,6 +31,7 @@ HEADERS += \
 
 FORMS += \
     addwindow.ui \
+    edit_data.ui \
     mainwindow.ui \
     menu.ui \
     search.ui

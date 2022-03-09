@@ -15,7 +15,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_loginbutton_clicked()
 {
-    qDebug()<<apple;
     login l1;
     //l1.settext();
     l1.logindetail(ui->usernamebox->text(),ui->passwordbox->text());

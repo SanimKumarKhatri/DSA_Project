@@ -19,8 +19,11 @@ public:
     }
 
     struct Node *createNode(Patient key){
-        struct Node* node = (struct Node *) malloc(sizeof(struct Node));
-        node->a = key;
+        qDebug()<<"Creating node";
+        struct Node* node = new Node;//(struct Node *) malloc(sizeof(struct Node));
+        qDebug()<<"Node created";
+        node->a=key;
+        qDebug()<<"Node updated";
         qDebug()<<key.patientNo;
         node->leftchild = NULL;
         node->rightchild = NULL;
@@ -126,6 +129,67 @@ public:
     Patient search(int value, Node* node);
     Patient searchBST(int);
     //bool remove(Node** node,int value);*
+    Node * Delete(Node *T,Patient x)
+    {
+        Node *p;
+
+        if(T == NULL)
+        {
+            return NULL;
+        }
+        else
+            if(x.patientNo > T->a.patientNo)
+            {
+                T -> rightchild = Delete(T -> rightchild,x);
+                if(getBalanceFactor(T) == 2){
+                    if(getBalanceFactor(T -> leftchild) >= 0){
+                        return rightRotate(T);
+                    }
+                    else{
+                        T->leftchild = leftRotate(T->leftchild);
+                        return rightRotate(T);
+                    }
+                }
+            }
+            else
+                if(x.patientNo < T -> a.patientNo)
+                {
+                    T -> leftchild = Delete(T->leftchild,x);
+                    if(getBalanceFactor(T)==-2) {
+                        if(getBalanceFactor(T->rightchild)<=0)
+                            return leftRotate(T);
+                        else{
+                            T->rightchild = rightRotate(T->rightchild);
+                            return leftRotate(T);
+                        }
+                    }
+                }
+                else
+                {
+                    if(T -> rightchild != NULL)
+                    {
+                        p = T -> rightchild;
+
+                        while(p -> leftchild != NULL)
+                            p = p -> leftchild;
+
+                        T -> a = p -> a;
+                        T -> rightchild = Delete(T -> rightchild,p->a);
+
+                        if(getBalanceFactor(T) == 2)
+                            if(getBalanceFactor (T -> leftchild) >= 0)
+                                return rightRotate(T);
+                            else{
+                                T->leftchild = leftRotate(T->leftchild);
+                                return rightRotate(T);
+                            }
+                    }
+                    else
+                        return(T->leftchild);
+                }
+        T ->height = getHeight(T);
+        return(T);
+    }
 };
 
 #endif // BST_H

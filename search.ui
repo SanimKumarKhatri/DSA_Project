@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>search</class>
  <widget class="QDialog" name="search">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,6 +17,31 @@
    <string>The Big Sick</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QPushButton" name="backbutton">
+       <property name="text">
+        <string>BACK</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
@@ -116,9 +144,9 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QPushButton" name="editbutton">
        <property name="text">
-        <string/>
+        <string>Edit</string>
        </property>
       </widget>
      </item>
@@ -130,6 +158,13 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

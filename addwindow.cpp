@@ -17,7 +17,7 @@ nextwindow::~nextwindow()
 void nextwindow::on_pushButton_clicked()
 {
     Patient *p = new Patient;
-    //p->patientNo=++bigdata.MAXID;
+    p->patientNo=++bigdata.MAXID;
     p->fname=ui->firstNameEditBox->text();
     p->lname=ui->lastNameeditbox->text();
     p->gender=ui->gender->currentText();
@@ -25,5 +25,10 @@ void nextwindow::on_pushButton_clicked()
     p->patienttype=ui->patientType->currentText();
     p->detail=ui->detail->text();
     p->age=ui->Ageedit->text().toInt();
-    //bigdata.insert(bigdata.root, *p);
+    p->dateofDischarge=ui->dateofdischargeedit->text();
+    bigdata.insert(bigdata.root, *p);
+    //ui->message->setText("Succesfully inserted!");
+    this->hide();
+    menu backed;
+    backed.exec();
 }

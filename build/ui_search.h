@@ -24,6 +24,10 @@ class Ui_search
 {
 public:
     QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_5;
+    QPushButton *backbutton;
+    QLabel *label_3;
+    QLabel *label_4;
     QLabel *label;
     QHBoxLayout *horizontalLayout_2;
     QHBoxLayout *horizontalLayout;
@@ -40,16 +44,38 @@ public:
     QLabel *dateofvisit;
     QLabel *dateofdischarge;
     QHBoxLayout *horizontalLayout_4;
-    QLabel *label_2;
+    QPushButton *editbutton;
     QPushButton *deletebutton;
+    QLabel *label_2;
 
     void setupUi(QDialog *search)
     {
         if (search->objectName().isEmpty())
             search->setObjectName(QString::fromUtf8("search"));
+        search->setWindowModality(Qt::NonModal);
         search->resize(424, 363);
         verticalLayout = new QVBoxLayout(search);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        backbutton = new QPushButton(search);
+        backbutton->setObjectName(QString::fromUtf8("backbutton"));
+
+        horizontalLayout_5->addWidget(backbutton);
+
+        label_3 = new QLabel(search);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_5->addWidget(label_3);
+
+        label_4 = new QLabel(search);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+
+        horizontalLayout_5->addWidget(label_4);
+
+
+        verticalLayout->addLayout(horizontalLayout_5);
+
         label = new QLabel(search);
         label->setObjectName(QString::fromUtf8("label"));
 
@@ -127,10 +153,10 @@ public:
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
-        label_2 = new QLabel(search);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        editbutton = new QPushButton(search);
+        editbutton->setObjectName(QString::fromUtf8("editbutton"));
 
-        horizontalLayout_4->addWidget(label_2);
+        horizontalLayout_4->addWidget(editbutton);
 
         deletebutton = new QPushButton(search);
         deletebutton->setObjectName(QString::fromUtf8("deletebutton"));
@@ -139,6 +165,11 @@ public:
 
 
         verticalLayout->addLayout(horizontalLayout_4);
+
+        label_2 = new QLabel(search);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        verticalLayout->addWidget(label_2);
 
 
         retranslateUi(search);
@@ -149,6 +180,9 @@ public:
     void retranslateUi(QDialog *search)
     {
         search->setWindowTitle(QCoreApplication::translate("search", "The Big Sick", nullptr));
+        backbutton->setText(QCoreApplication::translate("search", "BACK", nullptr));
+        label_3->setText(QString());
+        label_4->setText(QString());
         label->setText(QCoreApplication::translate("search", "Search for data", nullptr));
         patientnosearch->setText(QCoreApplication::translate("search", "Patient No", nullptr));
         patientnoedit->setInputMask(QString());
@@ -162,8 +196,9 @@ public:
         detail->setText(QString());
         dateofvisit->setText(QString());
         dateofdischarge->setText(QString());
-        label_2->setText(QString());
+        editbutton->setText(QCoreApplication::translate("search", "Edit", nullptr));
         deletebutton->setText(QCoreApplication::translate("search", "Delete", nullptr));
+        label_2->setText(QString());
     } // retranslateUi
 
 };

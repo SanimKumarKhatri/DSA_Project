@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>349</width>
-    <height>252</height>
+    <width>570</width>
+    <height>510</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="QLabel" name="nameLabel">
          <property name="text">
@@ -110,6 +110,24 @@
       </layout>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="dateofdischarge">
+         <property name="text">
+          <string>Date of Discharge</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="dateofdischargeedit">
+         <property name="placeholderText">
+          <string>yyyy/mm/dd</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QLabel" name="agelabel">
@@ -166,6 +184,13 @@
       <widget class="QPushButton" name="pushButton">
        <property name="text">
         <string>ok</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="message">
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>

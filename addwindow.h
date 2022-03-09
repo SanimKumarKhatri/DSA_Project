@@ -4,8 +4,9 @@
 #include <QDialog>
 #include "entity.h"
 #include "bst.h"
+#include "menu.h"
 
-//extern BST bigdata;
+extern BST bigdata;
 
 namespace Ui {
 class nextwindow;
